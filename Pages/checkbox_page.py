@@ -8,7 +8,7 @@ class CheckboxPageObject(BasePage):
 
     def click_button_toggle(self):
         super().element_click(Checkbox.BUTTON_TOGGLE)
-        super().element_click(Checkbox.BUTTON_TOGGLE_2)
+        super().element_click(Checkbox.BUTTON_TOGGLE_INNER)
         super().element_click(Checkbox.CHECKBOX_NOTES)
 
     def checking_element_selected(self):

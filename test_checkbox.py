@@ -1,6 +1,6 @@
-import time
-
 import pytest
+from assertpy import soft_assertions, assert_that
+
 from test_base import TestBase
 
 
@@ -15,7 +15,15 @@ class TestEndToEnd(TestBase):
     def test_successful_choose_checkbox(self):
         checkbox_page.click_button_toggle()
 
-        assert checkbox_page.checking_element_selected(), 'CheckBox is not selected'
-        assert checkbox_page.finding_result_field(), 'There is not a result\'s field'
-        assert checkbox_page.get_text_from_result() == checkbox_page.get_text_from_choosing_checkbox(), \
-            f'{checkbox_page.get_text_from_result()}!={checkbox_page.get_text_from_choosing_checkbox()}'
+        with soft_assertions():
+            assert_that(checkbox_page.checking_element_selected()) \
+                .described_as('CheckBox is selected') \
+                .is_true()
+
+            assert_that(checkbox_page.finding_result_field()) \
+                .described_as('There is a result\'s field') \
+                .is_true()
+
+            assert_that(checkbox_page.get_text_from_result()) \
+                .described_as('There is a result\'s field') \
+                .is_equal_to(checkbox_page.get_text_from_choosing_checkbox())
