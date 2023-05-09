@@ -29,11 +29,11 @@ class BasePage:
     def is_element_selected(self, locator):
         return self.find_need_element(locator).is_selected()
 
-    def random_alphanumeric_string(self, count):
+    def random_alphanumeric_string(self, count=random.randint(5, 16)):
         return ''.join([random.choice(string.ascii_letters + string.digits) for _ in range(count)])
 
-    def random_email(self, count1, count2, count3):
-        return f'{self.random_alphanumeric_string(count1)}@{self.random_alphanumeric_string(count2)}.{self.random_alphanumeric_string(count3)}'
+    def random_email(self):
+        return f'{self.random_alphanumeric_string()}@{self.random_alphanumeric_string()}.{self.random_alphanumeric_string(random.randint(2, 3))}'
 
     def waiting_alert(self):
         WebDriverWait(self.browser, timeout=7).until(expected_conditions.alert_is_present())

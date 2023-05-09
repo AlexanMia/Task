@@ -9,10 +9,10 @@ class TextBoxPageObject(BasePage):
 
     def entering_text_into_boxes(self):
         self.dict_data = {
-            Constants.NAME: f'{super().random_alphanumeric_string(4)} {super().random_alphanumeric_string(4)}',
-            Constants.EMAIL: super().random_email(5, 4, 3),
-            Constants.CURRENT_ADDRESS: super().random_alphanumeric_string(10),
-            Constants.PERMANENT_ADDRESS: super().random_alphanumeric_string(10)
+            Constants.NAME: f'{super().random_alphanumeric_string()} {super().random_alphanumeric_string()}',
+            Constants.EMAIL: super().random_email(),
+            Constants.CURRENT_ADDRESS: super().random_alphanumeric_string(),
+            Constants.PERMANENT_ADDRESS: super().random_alphanumeric_string()
         }
         super().enter_value_into_box(TextBox.FULL_NAME_TEXT_BOX, self.dict_data[Constants.NAME])
         super().enter_value_into_box(TextBox.EMAIL_TEXT_BOX, self.dict_data[Constants.EMAIL])
