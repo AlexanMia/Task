@@ -20,7 +20,7 @@ class TextBoxPageObject(BasePage):
         super().enter_value_into_box(TextBox.PERMANENT_ADDRESS_TEXT_BOX, self.dict_data[Constants.PERMANENT_ADDRESS])
         super().element_click(TextBox.BUTTON_SUBMIT)
 
-    def getter_dict_data(self):
+    def get_dict_data(self):
         return self.dict_data
 
     def find_field_with_entering_values(self):
