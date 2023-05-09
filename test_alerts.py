@@ -57,6 +57,5 @@ class TestAlerts(TestBase):
             .is_true()
 
         assert_that(alerts_page.text_from_result_prompt_field()) \
-            .described_as(
-            f'Check result of alert_confirm text is equal to {Constants.INFO_FROM_PROMPT_ALERT_ACCEPT}') \
+            .described_as(f'Check result of alert_confirm text is equal to {Constants.INFO_FROM_PROMPT_ALERT_ACCEPT}') \
             .is_equal_to(Constants.INFO_FROM_PROMPT_ALERT_ACCEPT)
