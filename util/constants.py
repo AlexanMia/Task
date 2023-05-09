@@ -12,7 +12,3 @@ class Constants:
     INFO_FROM_PROMPT_ALERT = 'Please enter your name'
     NAME_FOR_ALERT = 'Rachel'
     INFO_FROM_PROMPT_ALERT_ACCEPT = 'You entered Rachel'
-
-
-
-

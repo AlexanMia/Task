@@ -12,7 +12,9 @@ class TextBox:
     EMAIL_TEXT_BOX = (By.ID, 'userEmail')
     CURRENT_ADDRESS_TEXT_BOX = (By.ID, 'currentAddress')
     PERMANENT_ADDRESS_TEXT_BOX = (By.ID, 'permanentAddress')
+
     BUTTON_SUBMIT = (By.ID, 'submit')
+
     FIELD_WITH_RESULTS = (By.ID, 'output')
     RESULT_NAME = (By.ID, 'name')
     RESULT_EMAIL = (By.ID, 'email')
@@ -24,7 +26,7 @@ class Checkbox:
     BUTTON_CHECKBOX = (By.ID, 'item-1')
 
     BUTTON_TOGGLE = (By.CLASS_NAME, 'rct-collapse-btn')
-    BUTTON_TOGGLE_2 = (By.CSS_SELECTOR, 'ol > li > ol > li > span > button[class = "rct-collapse rct-collapse-btn"]')
+    BUTTON_TOGGLE_INNER = (By.XPATH, '//label[@for="tree-node-desktop"]/../button')
 
     CHECKBOX_COMMANDS = (By.CLASS_NAME, 'rct-icon-check')
 
@@ -37,10 +39,10 @@ class Checkbox:
 
 class Alerts:
     BUTTON_MENU_ALERTS = (By.XPATH, '//span[text()="Alerts"]')
-    BUTTON_OPEN_ALERT = (By.ID, 'alertButton')
+
     BUTTON_OPEN_ALERT_TIMER = (By.ID, 'timerAlertButton')
     BUTTON_OPEN_ALERT_CONFIRM = (By.ID, 'confirmButton')
     BUTTON_OPEN_ALERT_PROMPT = (By.ID, 'promtButton')
+
     CONFIRM_RESULT = (By.CSS_SELECTOR, 'span#confirmResult')
     PROMPT_RESULT = (By.ID, 'promptResult')
-
