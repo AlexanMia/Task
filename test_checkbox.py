@@ -4,7 +4,7 @@ from assertpy import soft_assertions, assert_that
 from test_base import TestBase
 
 
-class TestEndToEnd(TestBase):
+class TestEndToEndCheckbox(TestBase):
     @pytest.fixture(scope='class', autouse=True)
     def env_preparation(self):
         global checkbox_page
